@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Communication" table = "u915933203_twoperfect.Communication">
+      
+      <meta attribute = "class-description">
+         This class contains the communication detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "technicianId" column = "technicianId" type = "int"/>
+      <property name = "interventionId" column = "interventionId" type = "int"/>
+      <property name = "clientId" column = "clientId" type = "int"/>
+      <property name = "dateTime" column = "dateTime" type = "string"/>
+	  <property name = "type" column = "type" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

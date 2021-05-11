@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Coordinates" table = "u915933203_twoperfect.Coordinates">
+      
+      <meta attribute = "class-description">
+         This class contains the coordinates detail. 
+      </meta>
+      
+      <id name = "techId" type = "int" column = "techId">
+         <generator class="native"/>
+      </id>
+
+      <property name = "latitude" column = "latitude" type = "string"/>
+ 	  <property name = "longitude" column = "longitude" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

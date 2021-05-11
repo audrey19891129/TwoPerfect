@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Holiday" table = "u915933203_twoperfect.Holiday">
+      
+      <meta attribute = "class-description">
+         This class contains the holiday detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "employeeId" column = "employeeId" type = "int"/>
+	  <property name = "startDate" column = "startDate" type = "string"/>
+      <property name = "endDate" column = "endDate" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

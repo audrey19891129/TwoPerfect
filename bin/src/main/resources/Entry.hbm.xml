@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Entry" table = "u915933203_twoperfect.Entry">
+      
+      <meta attribute = "class-description">
+         This class contains the employee detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "packageId" column = "packageId" type = "int"/>
+      <property name = "productId" column = "productId" type = "int"/>
+      <property name = "quantity" column = "quantity" type = "int"/>
+      
+   </class>
+</hibernate-mapping>

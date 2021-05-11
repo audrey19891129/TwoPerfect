@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Ticket" table = "u915933203_twoperfect.Ticket">
+      
+      <meta attribute = "class-description">
+         This class contains the ticket detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "addressId" column = "addressId" type = "int"/>
+      <property name = "clientId" column = "clientId" type = "int"/>
+      <property name = "status" column = "status" type = "string"/>
+	  <property name = "descriptionId" column = "descriptionId" type = "int"/>
+	  <property name = "creationDate" column = "creationDate" type = "string"/>
+      <property name = "closingDate" column = "closingDate" type = "string"/>
+      <property name = "clientAvailStart" column = "clientAvailStart" type = "string"/>
+	  <property name = "clientAvailEnd" column = "clientAvailEnd" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

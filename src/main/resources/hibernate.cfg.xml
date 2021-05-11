@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.MySQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         com.mysql.cj.jdbc.Driver
+      </property>
+      
+      <property name = "hibernate.connection.url">
+         jdbc:mysql://151.106.97.51
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         u915933203_twoperfect
+      </property>
+      
+      <property name = "hibernate.connection.password">
+         Admin2021**
+      </property>
+      
+      <property name="hibernate.c3p0.min_size">5</property>
+	  <property name="hibernate.c3p0.max_size">20</property>
+	  <property name="hibernate.c3p0.acquire_increment">5</property>
+	  <property name="hibernate.c3p0.timeout">1800</property>
+      
+      <!-- List of XML mapping files -->
+      <mapping resource = "Employee.hbm.xml"/>
+	  <mapping resource = "Address.hbm.xml"/>
+      <mapping resource = "Client.hbm.xml"/>
+	  <mapping resource = "Product.hbm.xml"/>
+	  <mapping resource = "Entry.hbm.xml"/>
+	  <mapping resource = "Package.hbm.xml"/>
+	  <mapping resource = "Availability.hbm.xml"/>
+	  <mapping resource = "Ticket.hbm.xml"/>
+	  <mapping resource = "Description.hbm.xml"/>
+	  <mapping resource = "Intervention.hbm.xml"/>
+	  <mapping resource = "Holiday.hbm.xml"/>
+	  <mapping resource = "Communication.hbm.xml"/>
+	   <mapping resource = "Coordinates.hbm.xml"/>
+   </session-factory>
+</hibernate-configuration>

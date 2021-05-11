@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Address" table = "u915933203_twoperfect.Address">
+      
+      <meta attribute = "class-description">
+         This class contains the address detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "clientId" column = "clientId" type = "int"/>
+      <property name = "civicnumber" column = "civicnumber" type = "int"/>
+      <property name = "appartment" column = "appartment" type = "string"/>
+	  <property name = "street" column = "street" type = "string"/>
+	  <property name = "city" column = "city" type = "string"/>
+      <property name = "province" column = "province" type = "string"/>
+      <property name = "country" column = "country" type = "string"/>
+ 	  <property name = "zipcode" column = "zipcode" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

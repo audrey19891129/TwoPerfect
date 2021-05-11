@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Package" table = "u915933203_twoperfect.Package">
+      
+      <meta attribute = "class-description">
+         This class contains the package detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "clientId" column = "clientId" type = "int"/>
+      <property name = "addressId" column = "addressId" type = "int"/>
+      <property name = "start" column = "start" type = "string"/>
+      <property name = "end" column = "end" type = "string"/>
+   </class>
+</hibernate-mapping>

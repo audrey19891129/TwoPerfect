@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Intervention" table = "u915933203_twoperfect.Intervention">
+      
+      <meta attribute = "class-description">
+         This class contains the ticket detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "ticketId" column = "ticketId" type = "int"/>
+      <property name = "technicianId" column = "technicianId" type = "int"/>
+      <property name = "date" column = "date" type = "string"/>
+      <property name = "clientAvailStart" column = "clientAvailStart" type = "string"/>
+	  <property name = "clientAvailEnd" column = "clientAvailEnd" type = "string"/>
+      <property name = "punchIn" column = "punchIn" type = "string"/>
+	  <property name = "punchOut" column = "punchOut" type = "string"/>
+	  <property name = "status" column = "status" type = "string"/>
+      <property name = "note" column = "note" type = "string"/>
+      <property name = "comment" column = "comment" type = "string"/>
+      <property name = "communicationType" column = "communicationType" type = "string"/>
+      
+   </class>
+</hibernate-mapping>

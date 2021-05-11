@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.twoperfect.jaxrs.model.Availability" table = "u915933203_twoperfect.Availability">
+      
+      <meta attribute = "class-description">
+         This class contains employee availabilities. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "employeeId" column = "employeeId" type = "int"/>
+      <property name = "day" column = "day" type = "string"/>
+      <property name = "startTime" column = "startTime" type = "string"/>
+	  <property name = "endTime" column = "endTime" type = "string"/>
+	  <property name = "startDate" column = "startDate" type = "string"/>
+      <property name = "endDate" column = "endDate" type = "string"/>
+      
+   </class>
+</hibernate-mapping>
