@@ -13,6 +13,7 @@ public class Employee {
 	public String username;
 	public String password;
 	public String status;
+	public String photo;
 	public ArrayList<Availability> availability;
 	public ArrayList<Holiday> holidays;
 	public SQLite sqlite;
@@ -22,8 +23,40 @@ public class Employee {
 		this.holidays = new ArrayList<Holiday>();
 	}
 	
+	
+
 	public Employee(int id, String lastname, String firstname, String phone, String email, String title,
-			String username, String password, String status) {
+			String username, String password, String status, String photo) {
+		this.id = id;
+		this.lastname = lastname;
+		this.firstname = firstname;
+		this.phone = phone;
+		this.email = email;
+		this.title = title;
+		this.username = username;
+		this.password = password;
+		this.status = status;
+		this.photo = photo;
+	}
+
+	public Employee(String lastname, String firstname, String phone, String email, String title,
+			String username, String password, String status, String photo) {
+		this.lastname = lastname;
+		this.firstname = firstname;
+		this.phone = phone;
+		this.email = email;
+		this.title = title;
+		this.username = username;
+		this.password = password;
+		this.status = status;
+		this.photo = photo;
+	}
+
+
+
+	public Employee(int id, String lastname, String firstname, String phone, String email, String title,
+			String username, String password, String status, String photo, ArrayList<Availability> availability,
+			ArrayList<Holiday> holidays, SQLite sqlite) {
 		super();
 		this.id = id;
 		this.lastname = lastname;
@@ -34,20 +67,25 @@ public class Employee {
 		this.username = username;
 		this.password = password;
 		this.status = status;
+		this.photo = photo;
+		this.availability = availability;
+		this.holidays = holidays;
+		this.sqlite = sqlite;
 	}
 
-	public Employee(String lastname, String firstname, String phone, String email, String title, String username,
-			String password, String status) {
-		super();
-		this.lastname = lastname;
-		this.firstname = firstname;
-		this.phone = phone;
-		this.email = email;
-		this.title = title;
-		this.username = username;
-		this.password = password;
-		this.status = status;
+
+
+	public String getPhoto() {
+		return photo;
 	}
+
+
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+
+
 
 	public int getId() {
 		return id;
