@@ -23,6 +23,7 @@
       <property name = "username" column = "username" type = "string"/>
       <property name = "password" column = "password" type = "string"/>
 	  <property name = "status" column = "status" type = "string"/>
+	    <property name = "photo" column = "photo" type = "string"/>
       
    </class>
 </hibernate-mapping>
