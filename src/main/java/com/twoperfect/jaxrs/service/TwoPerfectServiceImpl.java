@@ -215,6 +215,11 @@ public class TwoPerfectServiceImpl implements TwoPerfectService {
 		return Response.ok(T).build();
 	}
 	
+	@Override
+	public Collection<Ticket> getAllTickets() {
+		return repository.getAllTickets();
+	}
+	
 	// INTERVENTION
 
 	@Override
