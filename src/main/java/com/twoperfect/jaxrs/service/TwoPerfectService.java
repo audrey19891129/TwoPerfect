@@ -177,6 +177,10 @@ public interface TwoPerfectService {
 	@PUT
 	public Response modifyTicket(Ticket ticket);
 	
+	@Path("/ticket")
+	@GET
+	public Collection<Ticket> getAllTickets();
+	
 	
 	//INTERVENTION
 	
@@ -252,5 +256,7 @@ public interface TwoPerfectService {
 	@Path("/empSearch/{day}/{date}/{startTime}/{endTime}")
 	@GET
 	public Collection<Employee> getAvailableEmployees(@PathParam("day")String day, @PathParam("date")String date, @PathParam("startTime")String startTime, @PathParam("endTime")String endTime);
+
+	
 	
 }
