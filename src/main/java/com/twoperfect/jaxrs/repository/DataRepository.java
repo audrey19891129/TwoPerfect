@@ -1069,6 +1069,27 @@ public Optional<Integer> createCommunication(Communication comm) {
 	}
 
 	
+	public Collection<Ticket> getAllTickets(){
+		openConnection();
+		Session session = factory.openSession();
+	    Transaction tx = null;
+	    
+	      try {
+	         tx = session.beginTransaction();
+	         @SuppressWarnings("unchecked")
+			 List<Ticket> list = session.createQuery("from Ticket order by creationDate DESC")
+	         .list();
+	         tx.commit();
+	         return list;
+	      } catch (HibernateException e) {
+	         if (tx!=null) tx.rollback();
+	         e.printStackTrace(); 
+	      } finally {
+	         session.close(); 
+	         closeConnecion();
+	      }
+	      return null;
+	}
 	
 	//INTERVENTION
 	
